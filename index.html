@@ -2,20 +2,18 @@
 <html>
 
 <head>
-	<title>Hello, WebVR! - A-Frame</title>
-	<meta name="description" content="Hello, WebVR! - A-Frame">
+	<title>AR Tractor Demo</title>
+	<meta name="description" content="AR Tractor Demo - by Four Kitchens">
 	<script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
 	<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.min.js"></script>
 </head>
 
 <body>
-	<a-scene embedded arjs="patternRatio: 0.65; detectionMode: mono; debugUIEnabled: false; trackingMethod: best;">
+	<a-scene embedded arjs="patternRatio: 0.65; detectionMode: mono; debugUIEnabled: false; trackingMethod: best;" vr-mode-ui="enabled: false">
 		<a-assets>
-			<a-asset-item id="tractor" src="https://cdn.glitch.com/79b38f66-70c7-4fb8-8476-d968c610862a%2Ftractor-2.gltf?1532736828377"></a-asset-item>
+			<a-asset-item id="tractor" src="./assets/tractor-2.gltf"></a-asset-item>
 		</a-assets>
-		<a-anchor type="pattern" url="https://cdn.glitch.com/f56f32b8-f0e9-4c55-b621-248a6f237229%2Fpattern-marker-short-url-FINAL.patt?1533328158835">
-			<!--<a-anchor type="pattern" url="https://cdn.glitch.com/cb7618f1-38d7-4de3-b561-749af6a001a2%2Fpattern-marker-center.patt?1532705727379">-->
-			<!--<s-sphere></s-sphere> -->
+		<a-anchor type="pattern" url="./assets/pattern-marker-short-url-FINAL.patt">
 			<a-entity gltf-model="#tractor" scale="2 2 2"></a-entity>
 		</a-anchor>
 		<a-camera-static/>
